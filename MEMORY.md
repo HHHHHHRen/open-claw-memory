@@ -35,7 +35,12 @@ _长期记忆档案_
 - 默认不给 markdown 格式，除非明确要求
 - **生成文件后（Excel、Word、PDF等）直接通过对话发送，不告知用户去workspace下载**
 
-## 项目档案
+## GitHub 备份约定
+- **仓库**: https://github.com/HHHHHHHRen/open-claw-memory
+- **规则**: 所有跑步相关内容每次更新后必须 `git push`
+- **备份文件**: MEMORY.md（汇总表）、running-records.md（详细档案）
+- **恢复**: 如本地文件丢失，从 GitHub clone 恢复
+- **教训**: 2026-08-09 误用 `write` 覆盖 running-records.md（从400行→36行），此后只 append 不再覆盖
 
 ## 任务档案
 
