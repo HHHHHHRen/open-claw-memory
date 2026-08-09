@@ -1,0 +1,31 @@
+# 被 Git 忽略的文件
+
+# 大文件和不需要版本控制的内容
+*.docx
+*.xlsx
+*.xls
+*.pptx
+*.tar.gz
+*.zip
+*.png
+*.jpg
+*.gif
+*.pdf
+
+# 代码目录和临时文件
+.kimi/
+downloads/
+wechat_backup/
+kimi-code-client/
+wechat_backup.zip
+kimi-code-client.tar.gz
+kimi-code-client-v2.tar.gz
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 运行时文件
+*.swp
+*.tmp
+*.log
