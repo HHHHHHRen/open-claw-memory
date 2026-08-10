@@ -6,7 +6,7 @@ _长期记忆档案_
 
 ### 铁律（必须遵守，违反则卸载）
 - **生成文件后（Excel、Word、PDF、Markdown等）必须通过message工具直接发送文件，严禁在对话框输出内容**
-- 跑步数据必须同时记录到 MEMORY.md 汇总表 和 running-records.md 详细档案，每周日主动分析一次
+- 跑步数据统一记录到 `running-log.md`，不再维护 running-records.md
 
 ### 称呼规则
 - **常规场景**: 称呼用户为「爹」，需带敬语
@@ -38,7 +38,7 @@ _长期记忆档案_
 ## GitHub 备份约定
 - **仓库**: https://github.com/HHHHHHHRen/open-claw-memory
 - **规则**: 所有跑步相关内容每次更新后必须 `git push`
-- **备份文件**: MEMORY.md（汇总表）、running-records.md（详细档案）
+- **备份文件**: MEMORY.md（汇总表）、running-log.md（跑步详细档案）
 - **恢复**: 如本地文件丢失，从 GitHub clone 恢复
 - **教训**: 2026-08-09 误用 `write` 覆盖 running-records.md（从400行→36行），此后只 append 不再覆盖
 
@@ -107,8 +107,8 @@ _长期记忆档案_
 - 周日：LSD 8km，执行新红线——起步8'00"±10秒，全程<7'30"
 
 ### 跑步数据记录规范
-**铁律：每次记录必须双备份 + 当日自查 + 天气关联**
-1. 记录时同步更新 MEMORY.md 汇总表 和 running-records.md 详细档案
+**铁律：每次记录必须更新 running-log.md + 当日自查 + 天气关联**
+1. 记录时同步更新 `running-log.md`（唯一跑步数据源）
 2. 记录完成后立即自查：核对日期、距离、配速、心率、步频是否完整
 3. 每周日交叉核对所有记录，确保无遗漏
 4. **每次跑步讨论必须查询并关联当日天气**（温度、湿度、体感温度），心率解读必须考虑天气因素
