@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build LBM",
+            "type": "shell",
+            "command": "clang",
+            "args": [
+                "-O3",
+                "spacer_lbm.c",
+                "-o",
+                "spacer_lbm",
+                "-lm"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compile LBM simulation"
+        },
+        {
+            "label": "Run LBM",
+            "type": "shell",
+            "command": "./spacer_lbm",
+            "dependsOn": "Build LBM",
+            "group": "test",
+            "detail": "Run LBM simulation"
+        },
+        {
+            "label": "Convert to MAT",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "bin2mat.py",
+                "spacer_flow_0050.bin"
+            ],
+            "dependsOn": "Run LBM",
+            "detail": "Convert binary to MATLAB format"
+        },
+        {
+            "label": "Build and Run",
+            "type": "shell",
+            "command": "clang -O3 spacer_lbm.c -o spacer_lbm -lm && ./spacer_lbm",
+            "group": "build",
+            "detail": "Compile and run in one step"
+        },
+        {
+            "label": "Full Pipeline",
+            "type": "shell",
+            "command": "clang -O3 spacer_lbm.c -o spacer_lbm -lm && ./spacer_lbm && python3 bin2mat.py spacer_flow_0050.bin",
+            "group": "build",
+            "detail": "Compile, run, and convert to MATLAB"
+        }
+    ]
+}
