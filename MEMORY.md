@@ -7,6 +7,7 @@ _长期记忆档案_
 ### 铁律（必须遵守，违反则卸载）
 - **生成文件后（Excel、Word、PDF、Markdown等）必须通过message工具直接发送文件，严禁在对话框输出内容**
 - 跑步数据统一记录到 `running-log.md`，不再维护 running-records.md
+- **每次跑步数据写入 running-log.md / MEMORY.md 后，必须立即执行 git add + commit + push，无需用户提醒**
 
 ### 称呼规则
 - **常规场景**: 称呼用户为「爹」，需带敬语
